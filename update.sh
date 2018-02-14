@@ -5,7 +5,7 @@ ENVIRONMENT_NAME='myntra_scrapper'
 echo "Evaluate if virtual environment $ENVIRONMENT_NAME needs to be created ..."
 if ! conda info --env | grep -w "$ENVIRONMENT_NAME"; then
     echo "Creating environment: $ENVIRONMENT_NAME"
-    conda create -n "$ENVIRONMENT_NAME" python=2.7 pip -y
+    conda create -n "$ENVIRONMENT_NAME" pip -y
     echo "Environment: $ENVIRONMENT_NAME created"
 fi
 

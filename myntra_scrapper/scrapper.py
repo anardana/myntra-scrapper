@@ -7,8 +7,8 @@ import requests
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, WebDriverException
 
-url = "https://www.myntra.com/men-formal-shirts?f=Print_or_Pattern_Type_article_attr%3Asolid%3A%3ASleeve_Length_article_attr%3Along%20sleeves%3A%3Abrand%3ABritish%20Club"
-download_dir = "/Users/1021839/data/shirt/long_sleeve_solid"
+url = "https://www.myntra.com/men-formal-shirts?f=Pattern_article_attr%3Achecked%3A%3ASleeve_Length_article_attr%3Ashort%20sleeves"
+download_dir = "/Users/1021839/data/shirt/checked/shortSleeve"
 
 pathlib.Path(download_dir).mkdir(parents=True, exist_ok=True)
 
@@ -21,7 +21,7 @@ driver.implicitly_wait(WAIT_TIME)
 logging.info("Opening URL: %s", url)
 driver.get(url)
 
-counter = 1
+counter = 0
 time.sleep(WAIT_TIME)
 while True:
     counter = counter + 1
